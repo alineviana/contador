@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    
+    margin: 19.6rem 22.6rem 18.8rem 23.3rem;
+}
+
+#timer {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+
+    margin: 4rem;
+
+    height: 21.3rem;
+    width: 32.1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls button{
+    margin-top: 3.6rem;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+
+#sounds {
+    width: 30.8rem;
+    height: 33.6rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+
+    margin-left: 16rem;
+}
+
+.card {
+    height: 15.2rem;
+    width: 13.8rem;    
+}
+
+.card button {
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+
+/* mobile */
+@media (min-width: 300px) and (max-width: 700px) {
+    .time {
+        width: 150rem;
+    }
+
+    #sounds {
+        margin-left: 10rem;
+    }
+}
