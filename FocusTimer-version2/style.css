@@ -11,34 +11,49 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12.6rem;
-    font-weight: 500;
+    font-weight: 500; 
 }
 
 main {
-    display: flex;
-    
-    margin: 19.6rem 22.6rem 18.8rem 23.3rem;
+    display: inline-block;
 }
 
+/* h1 {
+    font-size: 3.6rem;
+    background-image: linear-gradient(to right, #3bd9d9, #b527cf);
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+} */
+
 #timer {
-    display: inline;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    
+    margin: 10.4rem 4rem 0 5rem;
 
-    margin: 4rem;
-
-    height: 21.3rem;
     width: 32.1rem;
+    height: 11.7rem;
+
+    position: absolute;
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin: 27.9rem 4rem 0 5rem;
+
+    height: 4.8rem;
+    width: 32.1rem;
 }
 
-.controls button{
-    margin-top: 3.6rem;
+.controls button {
+    display: flex;
+    justify-content: space-between;
 
     border: none;
     background-color: transparent;
@@ -46,17 +61,19 @@ main {
     cursor: pointer;
 }
 
+.controls button.hide {
+    display: none;
+}
 
-#sounds {
-    width: 30.8rem;
-    height: 33.6rem;
-
+#sounds{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 3.2rem;
 
-    margin-left: 16rem;
+    height: 33.6rem;
+    width: 30.8rem;
+
+    margin: 2rem 3rem 0 8rem;
 }
 
 .card {
@@ -66,19 +83,47 @@ main {
 
 .card button {
     border: none;
-    background-color: transparent;
+    border-radius: 2.4rem;
+    background-color: #E1E1E6;
+
+    width: 10.8rem;
+    height: 12.2rem;
 
     cursor: pointer;
 }
 
+.card button:hover {
+    background-color: #02799D;
+}
 
-/* mobile */
-@media (min-width: 300px) and (max-width: 700px) {
-    .time {
-        width: 150rem;
+.card button path:hover {
+    fill: white;
+}
+
+.card button.active {
+    background-color: #02799D;
+}
+
+@media (min-width: 700px) {
+    main {
+        display: flex;
+    }
+
+    #timer {
+        margin: 26.9rem 4rem 0 25.5rem;
+    }
+
+    .controls {
+        margin: 43.9rem 4rem 0 25rem;
     }
 
     #sounds {
-        margin-left: 10rem;
+        margin: 22rem 0 0 20rem;
+        gap: 3.2rem;
+    }
+
+    .card button {
+        width: 13.8rem;
+        height: 15.2rem;
     }
 }
