@@ -4,16 +4,27 @@
 <br>
 
 > ## 👩🏻‍💻 Desafio 1️⃣ : criar um temporizador (FocusTimer). 
+<br>
+
+<img src="./FocusTimer/assets/preview.png" width=650>
 
 <br>
 
-> ## 👩🏻‍💻 Desafio 2️⃣ : criar um temporizador (FocusTimer - Versão 2). <br>
-- Cada card quando selecionado, vai mudar de cor e emitir um som diferente (floresta, chuva, cafeteria e lareira). 
+> ## 👩🏻‍💻 Desafio 2️⃣ : criar um temporizador (FocusTimer - Versão 2). 
+<br>
+
+<img src="./FocusTimer-version2/assets/preview.png" width=650>
+
+- Cada card quando selecionado, vai mudar de cor e emitir um som diferente 
+    1) Floresta
+    2) Chuva
+    3) Cafeteria
+    4) Lareira 
 - Funcionalidades esperadas dos botões:
-1) Play: aciona o timer;
-2) Stop: para o timer;
-3) ( + ): aumenta em mais 5 minutos o tempo do timer;
-4) ( - ): diminui em 5 minutos o tempo do timer. 
+    1) Play: aciona o timer;
+    2) Stop: para o timer;
+    3) ( + ): aumenta em mais 5 minutos o tempo do timer;
+    4) ( - ): diminui em 5 minutos o tempo do timer. 
 
 <br>
 
