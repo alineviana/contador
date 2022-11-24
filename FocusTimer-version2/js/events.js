@@ -8,7 +8,7 @@ import {
     buttonSoundForest,
     buttonSoundCanteen,
     buttonSoundRain,
-    buttonSoundFireplace
+    buttonSoundFireplace,
 } from "./elements.js"
 
 export default function({controls, timer, sounds}) {
@@ -16,14 +16,18 @@ export default function({controls, timer, sounds}) {
     buttonPlay.addEventListener('click', function() {
         controls.play();
         timer.countdown();
+        sounds.pressButton();
     })
     
     buttonPause.addEventListener('click', function() {
         controls.pause();
         timer.hold();
+        sounds.pressButton();
     })
     
     buttonSet.addEventListener('click', function() {
+        sounds.pressButton();
+
         let newMinutes = controls.getMinutes();
     
         if(!newMinutes) {
@@ -38,20 +42,21 @@ export default function({controls, timer, sounds}) {
     buttonStop.addEventListener('click', function() {
         controls.reset();
         timer.reset();
+        sounds.pressButton();
     })
     
     buttonTurnUp.addEventListener('click', function() {
-        minutes = prompt('Quantos minutos?') || 0;
-        updateTimerDisplay(minutes, 0);
+        timer.increment()
+        sounds.pressButton();
     })
     
     buttonTurnDown.addEventListener('click', function() {
-        minutes = prompt('Quantos minutos?') || 0;
-        updateTimerDisplay(minutes, 0);
+        timer.decrement()
+        sounds.pressButton();
     })
     
     buttonSoundForest.addEventListener('click', function OnClick() {
-        buttonSoundForest.classList.add('active');
+        buttonSoundForest.classList.toggle('active');
         buttonSoundCanteen.classList.remove('active');
         buttonSoundRain.classList.remove('active');
         buttonSoundFireplace.classList.remove('active');
@@ -59,7 +64,7 @@ export default function({controls, timer, sounds}) {
     })
     
     buttonSoundCanteen.addEventListener('click', function OnClick() {
-        buttonSoundCanteen.classList.add('active');
+        buttonSoundCanteen.classList.toggle('active');
         buttonSoundForest.classList.remove('active');
         buttonSoundRain.classList.remove('active');
         buttonSoundFireplace.classList.remove('active');
@@ -67,7 +72,7 @@ export default function({controls, timer, sounds}) {
     })
     
     buttonSoundRain.addEventListener('click', function OnClick() {
-        buttonSoundRain.classList.add('active');
+        buttonSoundRain.classList.toggle('active');
         buttonSoundForest.classList.remove('active');
         buttonSoundCanteen.classList.remove('active');
         buttonSoundFireplace.classList.remove('active');
@@ -75,11 +80,10 @@ export default function({controls, timer, sounds}) {
     })
     
     buttonSoundFireplace.addEventListener('click', function OnClick() {
-        buttonSoundFireplace.classList.add('active');
+        buttonSoundFireplace.classList.toggle('active');
         buttonSoundForest.classList.remove('active');
         buttonSoundCanteen.classList.remove('active');
         buttonSoundRain.classList.remove('active');
         sounds.pressButtonFireplace();
     })
-
 }

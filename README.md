@@ -7,7 +7,7 @@
 
 <br>
 
-> ## <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green"> 👩🏻‍💻 Desafio 2️⃣ : criar um temporizador (FocusTimer - Versão 2). <br>
+> ## 👩🏻‍💻 Desafio 2️⃣ : criar um temporizador (FocusTimer - Versão 2). <br>
 - Cada card quando selecionado, vai mudar de cor e emitir um som diferente (floresta, chuva, cafeteria e lareira). 
 - Funcionalidades esperadas dos botões:
 1) Play: aciona o timer;
