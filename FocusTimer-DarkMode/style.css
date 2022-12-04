@@ -28,7 +28,7 @@ body {
 
 #mode {
     position: absolute;
-    left: 32rem;
+    left: 32.5rem;
     top: 1rem;
     cursor: pointer;
 }
@@ -83,7 +83,7 @@ body {
     border: none;
     border-radius: 2.4rem;
     background-color: var(--bg-button);
-    box-shadow: 0.3rem 0.4rem 0.6rem rgb(0, 0, 0, 0.4);
+    box-shadow: 0.4rem 0.5rem 0.6rem rgb(0, 0, 0, 0.4);
 
     cursor: pointer;
 }
@@ -147,7 +147,7 @@ button.fireplace {
     }
 
     #mode {
-        margin: 3rem 0 0 92rem;
+        margin: 1.5rem 0 0 98rem;
     }
 
     #timer {
@@ -163,25 +163,25 @@ button.fireplace {
 
     #sounds {
         gap: 4.5rem;
-        margin: 12.4rem 0 0 0;
+        margin: 14.5rem 0 0 0;
     }
 }
 
 @media (min-width: 1380px) {
     #mode {
-        margin: 2rem 0 0 125rem;
+        margin: 1.5rem 0 0 131.5rem;
     }
 
     #timer {
-        margin: 18.4rem 56rem 0 0;
+        margin: 17.9rem 70rem 0 0;
     }
 
     #controls {  
-        margin: 25.9rem 41.5rem 0 0;
+        margin: 24.9rem 46rem 0 0;
     }
 
     #sounds {
         gap: 6rem;
-        margin: 8.4rem 0 0 0;
+        margin: 8.4rem 10rem 0 0;
     }
 }
