@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --background-color: #FFFFFF;
+    --text-color:#323238;
+
+    --bg-button: #E1E1E6;
+
+    --bg-light-button: #323238;
+    --bg-dark-button: #E1E1E6;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+
+    position: relative;
+}
+
+#mode {
+    position: absolute;
+    left: 32rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.container {
+    display: inline-block;
+}
+
+#timer {
+    display: flex;
+    
+    margin: 8.4rem 2rem 0 6.4rem;
+
+    font-size: 10rem;
+    text-shadow: 0.3rem 0.3rem 0.4rem rgb(0, 0, 0, 0.4);
+
+    position: absolute;
+}
+
+#controls {
+    display: flex;
+    gap: 2rem;
+
+    margin: 20.9rem 2rem 0 4.6rem;
+}
+
+#controls button {    
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+#mysvg {
+    filter: drop-shadow(0 3px 2px rgb(143, 141, 141));
+}
+
+.hide {
+    display: none;
+}
+
+#sounds {
+    display: grid;
+    justify-content: center;
+    gap: 3.2rem;
+    padding: 5.5rem 0 0 4rem;
+    grid-template-areas: "A B"
+                         "C D";
+}
+
+.card button {
+    border: none;
+    border-radius: 2.4rem;
+    background-color: var(--bg-button);
+    box-shadow: 0.3rem 0.4rem 0.6rem rgb(0, 0, 0, 0.4);
+
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: rgb(130, 58, 126);
+}
+
+.card button:hover svg path {
+    fill: var(--bg-button);
+}
+
+.card button.active {
+    background-color: #02799D;
+}
+
+input[type='range'] {
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-color: var(--bg-light-button);
+    width: 9.6rem;
+    height: .4rem;
+    border-radius: 1rem;
+    
+    cursor: pointer;
+
+    position: absolute;
+    left: 2.1rem;
+    bottom: 1.6rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 5rem;
+    background-color: var(--text-color);
+}
+
+input[type='range']:hover {
+    background-color: rgb(230, 240, 240);
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+    background-color: rgb(230, 240, 240);
+}
+
+button.forest,
+button.rain,
+button.coffeeShop,
+button.fireplace {
+    position: relative;
+    height: 15.2rem;
+    width: 13.8rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mode {
+        margin: 3rem 0 0 92rem;
+    }
+
+    #timer {
+        margin: 21.4rem 56rem 0 0;
+        font-size: 12rem;
+    }
+
+    #controls {  
+        width: 12.4rem;
+        gap: 4rem;
+        margin: 28.9rem 42rem 0 0;
+    }
+
+    #sounds {
+        gap: 4.5rem;
+        margin: 12.4rem 0 0 0;
+    }
+}
+
+@media (min-width: 1380px) {
+    #mode {
+        margin: 2rem 0 0 125rem;
+    }
+
+    #timer {
+        margin: 18.4rem 56rem 0 0;
+    }
+
+    #controls {  
+        margin: 25.9rem 41.5rem 0 0;
+    }
+
+    #sounds {
+        gap: 6rem;
+        margin: 8.4rem 0 0 0;
+    }
+}
