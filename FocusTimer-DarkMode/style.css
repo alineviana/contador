@@ -28,7 +28,7 @@ body {
 
 #mode {
     position: absolute;
-    left: 35rem;
+    left: 33.5rem;
     top: 1rem;
     cursor: pointer;
 }
@@ -178,7 +178,7 @@ button.fireplace {
 
 @media (min-width: 1380px) {
     #mode {
-        margin: 1.2rem 0 0 131.5rem;
+        margin: 1.2rem 0 0 130.5rem;
     }
 
     #timer {

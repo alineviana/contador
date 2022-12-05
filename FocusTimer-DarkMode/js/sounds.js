@@ -18,20 +18,9 @@ export default function() {
         buttonPressAudio.play();
     }
 
-    function timeEnd() {
-        kitchenTimer.play();
-        
-        buttonSoundForest.classList.remove('active');
-        buttonSoundRain.classList.remove('active');
-        buttonSoundCoffeeShop.classList.remove('active');
-        buttonSoundFireplace.classList.remove('active');
-
-        
-    }
-
     function pressButtonForest() {
         forest.loop = true
-
+   
         buttonSoundForest.classList.contains('active') ? forest.play() : forest.pause();
 
         rain.pause();
@@ -69,12 +58,37 @@ export default function() {
         coffeeShop.pause();
     }
 
+    function timeEnd() {
+        kitchenTimer.play();
+        
+        buttonSoundForest.classList.remove('active');
+        buttonSoundRain.classList.remove('active');
+        buttonSoundCoffeeShop.classList.remove('active');
+        buttonSoundFireplace.classList.remove('active');
+    }
+
+    sliderForest.addEventListener('input', function () {
+        forest.volume = sliderForest.value / 100
+    })
+    
+    sliderRain.addEventListener('input', function () {
+        rain.volume = sliderRain.value / 100
+    })
+    
+    sliderCoffeeShop.addEventListener('input', function() {
+        coffeeShop.volume = sliderCoffeeShop.value / 100
+    })
+    
+    sliderFireplace.addEventListener('input', function() {
+        fireplace.volume = sliderFireplace.value / 100
+    })
+    
     return {
         pressButton,
-        timeEnd,
         pressButtonForest,
         pressButtonCoffeeShop,
         pressButtonRain,
-        pressButtonFireplace
+        pressButtonFireplace,
+        timeEnd
     }
 }
