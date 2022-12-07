@@ -12,9 +12,15 @@
 
     --bg-button: #E1E1E6;
     --bg-button-hover-active:#02799D;
+    --bg-button-dark-hover-active: #0A3442;
 
     --bg-light-button: #323238;
     --bg-dark-button: #29292E;
+
+    --bg-controls: #E1E1E6;
+    --color-svg-dark: #C4C4CC;
+    --color-svg-active-dark: #FFFFFF;
+    --color-input-dark: #d7d4d4;
 }
 
 body {
@@ -46,7 +52,7 @@ body {
 #timer {
     display: flex;
     
-    margin: 8.4rem 2rem 0 6.4rem;
+    margin: 8.4rem 2rem 0 6.5rem;
 
     font-size: 10rem;
     text-shadow: 0.3rem 0.5rem 0.4rem rgba(48, 47, 47, 0.4);
@@ -58,7 +64,7 @@ body {
     display: flex;
     gap: 2rem;
 
-    margin: 20.9rem 2rem 0 4.6rem;
+    margin: 20.9rem 2rem 0 4.8rem;
 }
 
 #controls button {    
@@ -69,7 +75,7 @@ body {
 }
 
 #mysvg {
-    filter: drop-shadow(1px 3px 2px rgb(143, 141, 141));
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgb(143, 141, 141));
 }
 
 .hide {
@@ -80,7 +86,7 @@ body {
     display: grid;
     justify-content: center;
     gap: 3.2rem;
-    padding: 5.5rem 0 0 4rem;
+    padding: 5.5rem 0 0 3.4rem;
     grid-template-areas: "A B"
                          "C D";
 }
@@ -114,7 +120,7 @@ input[type='range'] {
     -webkit-appearance: none; 
     appearance: none; 
     background-color: var(--bg-light-button);
-    width: 9.6rem;
+    width: 7.6rem;
     height: .4rem;
     border-radius: 1rem;
     
@@ -151,22 +157,46 @@ button.rain,
 button.coffeeShop,
 button.fireplace {
     position: relative;
-    height: 15.2rem;
-    width: 13.8rem;
+    height: 12.6rem;
+    width: 11.8rem;
 }
 
 /* Dark Mode */
 #timer {
-    text-shadow: 0.4rem 0.6rem 0.5rem rgba(7, 6, 6, 0.4);
+    text-shadow: 0.4rem 0.4rem 0.5rem rgba(136, 135, 135, 0.4);
 }
 
-#controls.dark svg path {
-    fill: #C4C4CC;
-    filter: drop-shadow(0.1rem 0 0 rgb(33, 32, 32));
+#controls.dark svg {
+    filter: drop-shadow(0.25rem 0.25rem rgb(75, 74, 74));
 }
 
-.card button.dark {
-    background-color: #9d028b;
+#controls.dark path {
+    fill: var(--bg-controls);
+}
+
+#sounds.dark button {
+    background-color: var(--bg-dark-button);
+}
+
+#sounds.dark button.active {
+    background-color: var(--bg-button-dark-hover-active);
+}
+
+#sounds.dark button:hover {
+    background-color: var(--bg-button-dark-hover-active);
+}
+
+#sounds.dark svg path {
+    fill: var(--color-svg-dark);
+}
+
+#sounds.dark .active svg path {
+    fill: var(--color-svg-active-dark);
+}
+
+#sounds.dark input[type='range'], 
+#sounds.dark input[type='range']::-webkit-slider-thumb {
+    background-color: var(--color-input-dark);
 }
 
 @media (min-width: 768px) {
@@ -180,19 +210,31 @@ button.fireplace {
     }
 
     #timer {
-        margin: 21.4rem 56rem 0 0;
+        margin: 21.4rem 53rem 0 0;
         font-size: 12rem;
     }
 
     #controls {  
         width: 12.4rem;
         gap: 4rem;
-        margin: 28.9rem 43rem 0 0;
+        margin: 28.9rem 40rem 0 0;
     }
 
     #sounds {
         gap: 4.5rem;
-        margin: 14.5rem 0 0 0;
+        margin: 13rem 0 0 0;
+    }
+
+    button.forest,
+    button.rain,
+    button.coffeeShop,
+    button.fireplace {
+        height: 15.2rem;
+        width: 13.8rem;
+    }
+
+    input[type='range'] {
+        width: 9.6rem;
     }
 }
 
@@ -211,6 +253,6 @@ button.fireplace {
 
     #sounds {
         gap: 6rem;
-        margin: 8.4rem 10rem 0 0;
+        margin: 7.5rem 10rem 0 0;
     }
 }
