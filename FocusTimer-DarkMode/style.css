@@ -11,9 +11,10 @@
     --text-color:#323238;
 
     --bg-button: #E1E1E6;
+    --bg-button-hover-active:#02799D;
 
     --bg-light-button: #323238;
-    --bg-dark-button: #E1E1E6;
+    --bg-dark-button: #29292E;
 }
 
 body {
@@ -26,10 +27,15 @@ body {
     position: relative;
 }
 
-#mode {
+#mode {    
     position: absolute;
     left: 33.5rem;
     top: 1rem;
+}
+
+#mode button {
+    border: none;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -43,7 +49,7 @@ body {
     margin: 8.4rem 2rem 0 6.4rem;
 
     font-size: 10rem;
-    text-shadow: 0.3rem 0.3rem 0.4rem rgb(0, 0, 0, 0.4);
+    text-shadow: 0.3rem 0.5rem 0.4rem rgba(48, 47, 47, 0.4);
 
     position: absolute;
 }
@@ -63,7 +69,7 @@ body {
 }
 
 #mysvg {
-    filter: drop-shadow(0 3px 2px rgb(143, 141, 141));
+    filter: drop-shadow(1px 3px 2px rgb(143, 141, 141));
 }
 
 .hide {
@@ -83,13 +89,13 @@ body {
     border: none;
     border-radius: 2.4rem;
     background-color: var(--bg-button);
-    box-shadow: 0.4rem 0.5rem 0.6rem rgb(0, 0, 0, 0.4);
+    box-shadow: 0.6rem 0.6rem 0.6rem rgb(0, 0, 0, 0.4);
 
     cursor: pointer;
 }
 
 .card button:hover {
-    background-color: #02799D;
+    background-color: var(--bg-button-hover-active);
 }
 
 .card button:hover svg path {
@@ -97,7 +103,7 @@ body {
 }
 
 .card button.active {
-    background-color: #02799D;
+    background-color: var(--bg-button-hover-active);
 }
 
 .active svg path {
@@ -128,16 +134,16 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type='range']:hover {
-    background-color: rgb(230, 240, 240);
+    background-color: var(--bg-button);
 }
 
 input[type='range']::-webkit-slider-thumb:hover {
-    background-color: rgb(230, 240, 240);
+    background-color: var(--bg-button);
 }
 
 .active input[type='range'], 
 .active input[type='range']::-webkit-slider-thumb {
-    background-color: rgb(230, 240, 240);
+    background-color: var(--bg-button);
 }
 
 button.forest,
@@ -147,6 +153,20 @@ button.fireplace {
     position: relative;
     height: 15.2rem;
     width: 13.8rem;
+}
+
+/* Dark Mode */
+#timer {
+    text-shadow: 0.4rem 0.6rem 0.5rem rgba(7, 6, 6, 0.4);
+}
+
+#controls.dark svg path {
+    fill: #C4C4CC;
+    filter: drop-shadow(0.1rem 0 0 rgb(33, 32, 32));
+}
+
+.card button.dark {
+    background-color: #9d028b;
 }
 
 @media (min-width: 768px) {

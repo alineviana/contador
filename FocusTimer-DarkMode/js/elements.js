@@ -11,10 +11,10 @@ const buttonSoundRain = document.querySelector('.rain');
 const buttonSoundCoffeeShop = document.querySelector('.coffeeShop');
 const buttonSoundFireplace = document.querySelector('.fireplace');
 
-const sliderForest = document.querySelector('#sliderForest')
-const sliderRain = document.querySelector('#sliderRain')
-const sliderCoffeeShop = document.querySelector('#sliderCoffeeShop')
-const sliderFireplace = document.querySelector('#sliderFireplace')
+const sliderForest = document.querySelector('#sliderForest');
+const sliderRain = document.querySelector('#sliderRain');
+const sliderCoffeeShop = document.querySelector('#sliderCoffeeShop');
+const sliderFireplace = document.querySelector('#sliderFireplace');
 
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');

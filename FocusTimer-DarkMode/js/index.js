@@ -10,6 +10,9 @@ import {
     secondsDisplay
 } from "./elements.js";
 import Sounds from "./sounds.js";
+import Theme from "./theme.js";
+
+const theme = Theme();
 
 const controls = Controls ({
     buttonPlay,
