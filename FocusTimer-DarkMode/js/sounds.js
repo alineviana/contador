@@ -8,10 +8,10 @@ import {
 export default function() {
     const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true");
     const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true");
-    const forest = new Audio('sounds/Floresta.wav');
-    const rain = new Audio('sounds/Chuva.wav');
-    const coffeeShop = new Audio('sounds/Cafeteria.wav');
-    const fireplace = new Audio('sounds/Lareira.wav');
+    const forest = new Audio('assets/sounds/Floresta.wav');
+    const rain = new Audio('assets/sounds/Chuva.wav');
+    const coffeeShop = new Audio('assets/sounds/Cafeteria.wav');
+    const fireplace = new Audio('assets/sounds/Lareira.wav');
 
 
     function pressButton() {

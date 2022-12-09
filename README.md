@@ -28,7 +28,12 @@
 
 <br>
 
-> ## <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green"> 👩🏻‍💻 Desafio 3️⃣ : criar um temporizador (FocusTimer - Dark Mode).
+> ## 👩🏻‍💻 Desafio 3️⃣ : criar um temporizador (FocusTimer - Dark Mode).
+<br>
+<img src="./FocusTimer-DarkMode/assets/preview-darkmode.png" width=650>
+
+🔗[Clique aqui para acessar](https://alineviana.github.io/contador/FocusTimer-DarkMode/)
+
 - Criar a versão Dark Mode.
 - Trabalhar com o volume dos sons de cada card.
 - Funcionalidade de um card: quando selecionado ele muda de cor e começa a tocar o som específico.
