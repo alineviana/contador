@@ -19,8 +19,10 @@ export default function() {
     }
 
     function pressButtonForest() {
-        forest.loop = true
-   
+        pressButton();
+
+        forest.loop = true;
+
         buttonSoundForest.classList.contains('active') ? forest.play() : forest.pause();
 
         rain.pause();
@@ -29,8 +31,10 @@ export default function() {
     }
 
     function pressButtonRain() {
-        rain.loop = true
-   
+        pressButton();
+
+        rain.loop = true;
+
         buttonSoundRain.classList.contains('active') ? rain.play() : rain.pause();
 
         forest.pause();
@@ -39,7 +43,9 @@ export default function() {
     }
 
     function pressButtonCoffeeShop() {
-        coffeeShop.loop = true
+        pressButton();
+
+        coffeeShop.loop = true;
         
         buttonSoundCoffeeShop.classList.contains('active') ? coffeeShop.play() : coffeeShop.pause();
 
@@ -49,7 +55,9 @@ export default function() {
     }
 
     function pressButtonFireplace() {
-        fireplace.loop = true
+        pressButton();
+
+        fireplace.loop = true;
 
         buttonSoundFireplace.classList.contains('active') ? fireplace.play() : fireplace.pause();
 

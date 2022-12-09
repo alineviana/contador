@@ -1,3 +1,5 @@
+import Sounds from "./sounds.js"
+
 export default function Theme(){
 
     const darkTheme = document.querySelector('.light')
@@ -10,6 +12,7 @@ export default function Theme(){
         document.querySelector('.light').classList.add('hide')
         document.getElementById('controls').classList.add('dark')
         document.getElementById('sounds').classList.add('dark')
+        Sounds().pressButton();
     })
 
     lightTheme.addEventListener ('click', function() {
@@ -19,5 +22,6 @@ export default function Theme(){
         document.querySelector('.light').classList.remove('hide')
         document.getElementById('controls').classList.remove('dark')
         document.getElementById('sounds').classList.remove('dark')
+        Sounds().pressButton();
     })
 }
