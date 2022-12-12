@@ -25,10 +25,11 @@ export default function Controls({
     }
 
     function getMinutes() {
-        let newMinutes = prompt('Quantos minutos?');
+        let newMinutes = Number(prompt("Quantos minutos? (Digite um número: )"));
 
-        if(!newMinutes) {
-            return false;
+        if (!newMinutes) {
+            alert('Digite um número!')
+            return
         }
 
         return newMinutes;
